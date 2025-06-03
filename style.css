@@ -1,0 +1,467 @@
+/* 设置全局样式 */
+:root {
+    --primary-color: #4a86e8;
+    --dark-color: #333333;
+    --text-color: #333;
+    --secondary-color: #6c757d;
+    --light-gray: #f5f5f5;
+    --border-radius: 8px;
+    --transition-default: all 0.3s ease;
+    --box-shadow-default: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --title-font-weight: 600;
+    --title-color: #333;
+}
+
+body {
+    line-height: 1.6;
+    color: #444;
+    background-color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#daohang {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 12px 0;
+    transition: var(--transition-default);
+}
+
+#daohang .container {
+    max-width: 900px;
+}
+
+#daohang .navbar-brand {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #333;
+    transition: var(--transition-default);
+    margin-left: -15px;
+    padding-left: 0;
+}
+
+#daohang .navbar-brand:hover {
+    color: var(--primary-color);
+}
+
+#daohang .nav-link {
+    color: #555;
+    font-weight: 500;
+    margin: 0 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: var(--transition-default);
+}
+
+#daohang .nav-link:hover {
+    color: var(--primary-color);
+}
+
+#daohang .nav-item.active .nav-link {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+#lunbotu {
+    margin-top: 76px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#lunbotu .carousel-item img {
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.3s ease, var(--transition-default);
+    cursor: pointer;
+}
+
+#lunbotu:hover .carousel-item img {
+    transform: scale(1.05);
+}
+
+
+
+#lunbotu .carousel-control-next-icon,
+#lunbotu .carousel-control-prev-icon {
+    width: 15px;
+    height: 15px;
+}
+
+#dibu {
+    background-color: #f8f9fa;
+    color: var(--dark-color);
+}
+
+#dibu .container {
+    max-width: 900px;
+}
+
+.yemian-biaoti {
+    background-color: #f8f9fa;
+    padding: 90px 0 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.yemian-biaoti h1 {
+    font-weight: var(--title-font-weight);
+    color: var(--title-color);
+    margin-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.yemian-biaoti h1:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+}
+
+.yemian-biaoti .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.yemian-biaoti .breadcrumb-item a {
+    color: #666;
+    text-decoration: none;
+    transition: var(--transition-default);
+    font-size: 0.9rem;
+}
+
+.yemian-biaoti .breadcrumb-item a:hover {
+    color: var(--primary-color);
+}
+
+.yemian-biaoti .breadcrumb-item.active {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.dianying-kapian {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-default);
+    height: 100%;
+    transition: var(--transition-default);
+}
+
+.dianying-kapian:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+.kapian-tupian {
+    position: relative;
+    overflow: hidden;
+}
+
+.kapian-tupian img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: var(--transition-default);
+}
+
+.dianying-kapian:hover .kapian-tupian img {
+    transform: scale(1.05);
+}
+
+.kapian-fugai {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: var(--transition-default);
+    padding: 20px;
+    text-align: center;
+}
+
+.dianying-kapian:hover .kapian-fugai {
+    opacity: 1;
+}
+
+.kapian-fugai h4 {
+    color: white;
+    font-weight: var(--title-font-weight);
+    margin-bottom: 10px;
+    transition: var(--transition-default);
+}
+
+.kapian-fugai p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+    transition: var(--transition-default);
+}
+
+.kapian-fugai .btn {
+    transition: var(--transition-default);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+}
+
+.kapian-fugai .btn:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.kapian-neirong {
+    padding: 15px;
+}
+
+.kapian-neirong h5 {
+    font-weight: var(--title-font-weight);
+    color: var(--title-color);
+    margin-bottom: 8px;
+}
+
+.gushi-mokuai {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-default);
+    margin-bottom: 30px;
+    transition: var(--transition-default);
+}
+
+.gushi-mokuai:hover {
+    box-shadow: var(--box-shadow-hover);
+}
+
+.gushi-tupian {
+    overflow: hidden;
+    height: 400px;
+}
+
+.gushi-tupian img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition: var(--transition-default);
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gushi-mokuai:hover .gushi-tupian img {
+    transform: scale(1.03);
+}
+
+.gushi-neirong {
+    padding: 25px;
+}
+
+.gushi-neirong h3 {
+    font-weight: var(--title-font-weight);
+    color: var(--title-color);
+    margin-bottom: 12px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.gushi-neirong h3:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+}
+
+.dianying-xinxi {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.dianying-xinxi span {
+    margin-right: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.dianying-xinxi i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.login-page {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 80px;
+}
+
+.auth-container {
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-header {
+    margin-bottom: 35px;
+}
+
+.auth-header h2 {
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+.auth-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.login-page .form-group {
+    margin-bottom: 25px;
+}
+
+.login-page .form-control {
+    padding: 15px 20px;
+    border: 1px solid #e8ecef;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #fafbfc;
+    transition: var(--transition-default);
+}
+
+.login-page .form-control:focus {
+    border-color: #4A86E8;
+    box-shadow: 0 0 0 3px rgba(74, 134, 232, 0.1);
+    background: #ffffff;
+    outline: none;
+}
+
+.login-page .btn-primary {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #4A86E8 0%, #6fa8f5 100%);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    transition: var(--transition-default);
+    margin-top: 10px;
+}
+
+.login-page .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(74, 134, 232, 0.3);
+    background: linear-gradient(135deg, #3d71c7 0%, #5a96e8 100%);
+}
+
+.switch-text {
+    margin-top: 25px;
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.switch-text a {
+    color: #4A86E8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-default);
+}
+
+.switch-text a:hover {
+    color: #3d71c7;
+    text-decoration: none;
+}
+
+#register-form {
+    display: none;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+@media (max-width: 991.98px) {
+    #lunbotu .carousel-item img {
+        height: 400px;
+    }
+    
+    .gushi-tupian {
+        height: 300px;
+    }
+    
+    .gushi-tupian img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gushi-neirong {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #lunbotu .carousel-item img {
+        height: 250px;
+    }
+    
+    .yemian-biaoti {
+        padding: 90px 0 20px;
+    }
+    
+    .gushi-mokuai {
+        margin-bottom: 25px;
+    }
+    
+    .gushi-tupian {
+        height: 200px;
+    }
+    
+    .gushi-tupian img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
